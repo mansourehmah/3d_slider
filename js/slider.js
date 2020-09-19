@@ -20,4 +20,7 @@ $(function () {
       });
     }
   });
+  $('.main').mouseleave(function(){
+    $(".main>div>span").css("display", "none");
+  })
 });
