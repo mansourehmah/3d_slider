@@ -91,5 +91,45 @@ $(function () {
         ")",
     });
   });
-//   end change slide with click page
+  //   end change slide with click page
+
+  // start change slide with button
+  $(".cont>span>span").click(function () {
+    var num = $(this).parent().index();
+    console.log(num);
+    $(".show>div>img").css({ "z-index": 18 });
+    $(".show>div>img:nth-of-type(" + index + ")").css({ "z-index": 20 });
+    $(".cont>span>span").css({ "background-color": "transparent" });
+    $(".cont>span:nth-of-type(" + (num + 1) + ")>span").css({
+      "background-color": "white",
+    });
+    if (num + 1 > index) {
+      $(".show>div>img:nth-of-type(" + index + ")").css({
+        animation: "next2 1s forwards",
+        "z-index": 20,
+      });
+      $(".show>div>img:nth-of-type(" + (num + 1) + ")").css({
+        animation: "next 1s forwards",
+        "z-index": 21,
+      });
+    }
+    if (num + 1 < index) {
+      $(".show>div>img:nth-of-type(" + index + ")").css({
+        animation: "prev2 1s forwards",
+        "z-index": 20,
+      });
+      $(".show>div>img:nth-of-type(" + (num + 1) + ")").css({
+        animation: "prev 1s forwards",
+        "z-index": 21,
+      });
+    }
+    index = num + 1;
+    $(".main").css({
+      "background-image":
+        "url(" +
+        $(".show>div>img:nth-of-type(" + index + ")").attr("src") +
+        ")",
+    });
+  });
+  // end change slide with button
 });
