@@ -2,7 +2,7 @@ $(function () {
   var _w = $(this).innerWidth() / 2;
   var _h = $(this).innerHeight() / 2;
   var index = 1;
-  text()
+  text();
   //start change cursor
   $(".main").mousemove(function (event) {
     var x, y;
@@ -91,7 +91,7 @@ $(function () {
         $(".show>div>img:nth-of-type(" + index + ")").attr("src") +
         ")",
     });
-    text()
+    text();
   });
   //   end change slide with click page
 
@@ -132,7 +132,7 @@ $(function () {
         $(".show>div>img:nth-of-type(" + index + ")").attr("src") +
         ")",
     });
-    text()
+    text();
   });
   // end change slide with button
 
@@ -175,4 +175,8 @@ $(function () {
   }
   // end type text
 
+  //resize window
+  $(window).resize(function(){
+    location.reload();
+  })
 });
