@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Satisfy", cursive;
+}
+body {
+  overflow: hidden;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(img/1.jpeg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: none;
+  /* transition: .4s; */
+}
+.main::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.725);
+}
+.main > div {
+  width: 85%;
+  height: 85%;
+}
+.main > div > span {
+  position: absolute;
+  display: none;
+  z-index: 20;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  font-size: 40px;
+}
+.slider {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+}
+.cont {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 100;
+}
+.cont > span {
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+}
+.cont > span > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgb(22, 18, 18);
+  box-shadow: 0px 0px 2px white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cont > span:nth-of-type(1) > span {
+  background-color: white;
+}
+.wrapper {
+  width: 100%;
+  height: 80%;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+  /* border: 1px solid red; */
+}
+.slider-show {
+  /* width: 300%; */
+  /* display: flex; */
+  height: 100%;
+  position: relative;
+  transform: translateZ(-200px);
+  /* overflow: hidden; */
+}
+.show {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.show > div {
+  width: 100%;
+  /* width: 700%; */
+  height: 100%;
+  /* display: flex; */
+  /* transform: translateX(-14.28%); */
+  transition: 1s;
+  overflow: hidden;
+  position: relative;
+}
+.show > div > img {
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: calc(100% + 200px);
+  height: calc(100% + 100px);
+  object-fit: cover;
+  /* transition: 1s; */
+}
+.main > ul {
+  display: none;
+}
+.title,
+.des {
+  position: absolute;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.479);
+  color: white;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 60px;
+  padding: 7px;
+}
+.title {
+  left: -5%;
+  top: -8%;
+}
+.des {
+  right: -5%;
+  bottom: -8%;
+  font-size: 40px;
+  padding: 15px;
+}
