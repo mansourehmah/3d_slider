@@ -18,7 +18,7 @@ body {
   align-items: center;
   position: relative;
   cursor: none;
-  /* transition: .4s; */
+  overflow: hidden;
 }
 .main::before {
   position: absolute;
@@ -132,7 +132,7 @@ body {
   color: white;
   text-transform: capitalize;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 40px;
   padding: 7px;
 }
 .title {
@@ -142,41 +142,41 @@ body {
 .des {
   right: -5%;
   bottom: -8%;
-  font-size: 40px;
+  font-size: 20px;
   padding: 15px;
 }
-@keyframes prev{
-    from{
-        left: calc(-100% - 100px);
-    }
-    to{
-        left: -100px;
-    }
+@keyframes prev {
+  from {
+    left: calc(-100% - 100px);
+  }
+  to {
+    left: -100px;
+  }
 }
-@keyframes prev2{
-    from{
-        left: -100px;
-    }
-    to{
-        left: calc(100% - 100px);
-    }
+@keyframes prev2 {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc(100% - 100px);
+  }
 }
-@keyframes next{
-    from{
-        left: calc(100% - 100px);
-    }
-    to{
-        left: -100px;
-    }
+@keyframes next {
+  from {
+    left: calc(100% - 100px);
+  }
+  to {
+    left: -100px;
+  }
 }
-@keyframes next2{
-    from{
-        left: -100px;
-    }
-    to{
-        left: calc(-100% - 100px);
-    }
+@keyframes next2 {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc(-100% - 100px);
+  }
 }
-.show>div>img:nth-of-type(1){
-    z-index: 21;
+.show > div > img:nth-of-type(1) {
+  z-index: 21;
 }
