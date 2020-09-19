@@ -19,8 +19,24 @@ $(function () {
         top: y - 15,
       });
     }
+    $(".wrapper").css(
+      "transform",
+      "perspective(500px) rotateY(" +
+        ((x - _w) * 10) / _w +
+        "deg) rotateX(" +
+        ((_h - y) * 10) / _h +
+        "deg)"
+    );
+    $(".show>div>img:nth-of-type(" + index + ")").css({
+      transform:
+        "translate(" +
+        ((_w - x) * 100) / _w +
+        "px , " +
+        ((_h - y) * 50) / _h +
+        "px)",
+    });
   });
-  $('.main').mouseleave(function(){
+  $(".main").mouseleave(function () {
     $(".main>div>span").css("display", "none");
-  })
+  });
 });
