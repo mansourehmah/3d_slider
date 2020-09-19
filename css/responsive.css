@@ -1,8 +1,8 @@
-@media screen and (min-width:992px){
-    .title {
-      font-size: 60px;
-    }
-    .des {
-      font-size: 40px;
-    }
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 60px;
   }
+  .des {
+    font-size: 40px;
+  }
+}
