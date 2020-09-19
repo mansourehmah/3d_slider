@@ -2,6 +2,7 @@ $(function () {
   var _w = $(this).innerWidth() / 2;
   var _h = $(this).innerHeight() / 2;
   var index = 1;
+  text()
   //start change cursor
   $(".main").mousemove(function (event) {
     var x, y;
@@ -90,6 +91,7 @@ $(function () {
         $(".show>div>img:nth-of-type(" + index + ")").attr("src") +
         ")",
     });
+    text()
   });
   //   end change slide with click page
 
@@ -130,6 +132,47 @@ $(function () {
         $(".show>div>img:nth-of-type(" + index + ")").attr("src") +
         ")",
     });
+    text()
   });
   // end change slide with button
+
+  // start type text
+  function text() {
+    var title = ["mansoureh", "mahzadeh", "Lorem", "ipsum", "dolor"];
+    var description = [
+      "Lorem ipsum, dolor sit amet",
+      "consectetur adipisicing elit. Vero",
+      "Vero nisi officiis quaerat placeat rerum?",
+      "Natus voluptas esse commodi delenit",
+      "Lorem ipsum, dolor sit amet consectetur",
+    ];
+    var i = 0,
+      j = 0,
+      name,
+      des;
+    name = title[index - 1];
+    des = description[index - 1];
+    $(".title").text("");
+    $(".des").text("");
+    setInterval(_type, 400 / name.length);
+    setInterval(_type2, 600 / des.length);
+    function _type() {
+      if (i < name.length) {
+        $(".title").text($(".title").text() + name[i]);
+        i++;
+      } else {
+        clearInterval(_type);
+      }
+    }
+    function _type2() {
+      if (j < des.length) {
+        $(".des").text($(".des").text() + des[j]);
+        j++;
+      } else {
+        clearInterval(_type2);
+      }
+    }
+  }
+  // end type text
+
 });
